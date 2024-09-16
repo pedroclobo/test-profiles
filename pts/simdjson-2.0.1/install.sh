@@ -3,6 +3,7 @@
 rm -rf simdjson-2.0.4
 tar -xf simdjson-2.0.4.tar.gz
 cd simdjson-2.0.4
+sed -i '734i (void) count;' tests/dom/document_stream_tests.cpp
 mkdir build
 cd build
 
