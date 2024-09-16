@@ -4,7 +4,7 @@ tar -xf ngspice-34.tar.gz
 tar -xf iscas85Circuits-1.tar.xz
 
 cd ngspice-34
-./configure --enable-openmp
+./configure
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 cd ~
