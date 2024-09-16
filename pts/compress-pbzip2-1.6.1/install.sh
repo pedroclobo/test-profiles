@@ -9,10 +9,11 @@ cd ..
 cd pbzip2-1.1.13/
 make pbzip2-static
 echo $? > ~/install-exit-status
+TASKSET="taskset -c 1"
 cd ~
 cat > compress-pbzip2 <<EOT
 #!/bin/sh
 cd pbzip2-1.1.13/
-./pbzip2 -v -c -p\$NUM_CPU_CORES -r -5 ../FreeBSD-13.0-RELEASE-amd64-memstick.img > /dev/null 2>\$LOG_FILE
+$TASKSET ./pbzip2 -v -c -p\$NUM_CPU_CORES -r -5 ../FreeBSD-13.0-RELEASE-amd64-memstick.img > /dev/null 2>\$LOG_FILE
 EOT
 chmod +x compress-pbzip2
