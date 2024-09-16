@@ -25,6 +25,8 @@ cd fftw-mr
 make -j $NUM_CPU_JOBS
 echo $? > ~/install-exit-status
 
+TASKSET="taskset -c 1"
+
 cd ~/fftw-stock
 ./configure --enable-threads
 make -j $NUM_CPU_JOBS
@@ -33,7 +35,7 @@ cd ~/
 echo "
 #!/bin/sh
 
-./\$@ > \$LOG_FILE 2>&1
+$TASKSET ./\$@ > \$LOG_FILE 2>&1
 echo \$? > ~/test-exit-status
 " > fftw
 

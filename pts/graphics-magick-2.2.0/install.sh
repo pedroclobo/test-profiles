@@ -16,12 +16,15 @@ then
 else
 	make install
 fi
+
+TASKSET="taskset -c 1"
+
 cd ~
 rm -rf GraphicsMagick-1.3.43/
 rm -rf gm_/share/doc/GraphicsMagick/
 rm -rf gm_/share/man/
 ./gm_/bin/gm convert sample-photo-mars.jpg input.mpc
 echo "#!/bin/sh
-OMP_NUM_THREADS=\$NUM_CPU_CORES ./gm_/bin/gm benchmark -duration 60 convert input.mpc \$@ null: > \$LOG_FILE 2>&1
+OMP_NUM_THREADS=\$NUM_CPU_CORES $TASKSET ./gm_/bin/gm benchmark -duration 60 convert input.mpc \$@ null: > \$LOG_FILE 2>&1
 echo \$? > ~/test-exit-status" > graphics-magick
 chmod +x graphics-magick

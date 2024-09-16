@@ -18,9 +18,11 @@ else
 fi
 echo $? > ~/install-exit-status
 
+TASKSET="taskset -c 1"
+
 cd ~
 echo "#!/bin/sh
 cd aircrack-ng-1.7
-./aircrack-ng -p \$NUM_CPU_CORES \$@  2>&1 | tr '\\r' '\\n' | awk -v max=0 '{if(\$1>max){max=\$1}}END{print max \" k/s\"}' > \$LOG_FILE
+$TASKSET ./aircrack-ng -p \$NUM_CPU_CORES \$@  2>&1 | tr '\\r' '\\n' | awk -v max=0 '{if(\$1>max){max=\$1}}END{print max \" k/s\"}' > \$LOG_FILE
 echo \$? > ~/test-exit-status" > aircrack-ng
 chmod +x aircrack-ng

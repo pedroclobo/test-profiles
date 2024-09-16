@@ -11,9 +11,12 @@ unzip -o church-facade-ply.zip
 mv Church\ façade.ply draco-1.5.6/build/church.ply
 unzip -o lion-statue_ply.zip
 mv Lion\ statue_ply/Lion\ statue.ply draco-1.5.6/build/lion.ply
+
+TASKSET="taskset -c 1"
+
 cd ~
 echo "#!/bin/sh
 cd draco-1.5.6/build
-./draco_encoder \$@ -o out.drc -cl 10 -qp 16 > \$LOG_FILE 2>&1
+$TASKSET ./draco_encoder \$@ -o out.drc -cl 10 -qp 16 > \$LOG_FILE 2>&1
 echo \$? > ~/test-exit-status" > draco
 chmod +x draco

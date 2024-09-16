@@ -14,8 +14,9 @@ fi
 ./configure $BUILD_OPTIONS
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
+TASKSET="taskset -c 1"
 cd ~
 echo "#!/bin/sh
-./rnnoise-0.2/examples/rnnoise_demo  \$1 out.raw
+$TASKSET ./rnnoise-0.2/examples/rnnoise_demo  \$1 out.raw
 echo \$? > ~/test-exit-status" > rnnoise
 chmod +x rnnoise

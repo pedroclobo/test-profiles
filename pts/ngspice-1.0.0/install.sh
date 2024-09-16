@@ -9,8 +9,10 @@ make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 cd ~
 
+TASKSET="taskset -c 1"
+
 echo "#!/bin/sh
 
 cd ngspice-34
-./src/ngspice \$@ > \$LOG_FILE" > ngspice
+$TASKSET ./src/ngspice \$@ > \$LOG_FILE" > ngspice
 chmod +x ngspice

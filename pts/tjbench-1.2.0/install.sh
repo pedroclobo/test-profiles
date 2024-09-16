@@ -14,10 +14,12 @@ else
 fi
 echo $? > ~/install-exit-status
 
+TASKSET="taskset -c 1"
+
 cd ~
 
 echo "#!/bin/sh
 cd libjpeg-turbo-2.1.0/build
-./tjbench ../../jpeg-test-1.JPG -benchtime 20 -warmup 5 -nowrite > \$LOG_FILE
+$TASKSET ./tjbench ../../jpeg-test-1.JPG -benchtime 20 -warmup 5 -nowrite > \$LOG_FILE
 echo \$? > ~/test-exit-status" > tjbench
 chmod +x tjbench

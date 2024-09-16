@@ -11,9 +11,10 @@ else
 	make -j $NUM_CPU_CORES
 	echo $? > ~/install-exit-status
 fi
+TASKSET="taskset -c 1"
 cd ~
 echo "#!/bin/sh
-./primesieve-$version/primesieve \$@ > \$LOG_FILE 2>&1
+$TASKSET ./primesieve-$version/primesieve \$@ > \$LOG_FILE 2>&1
 echo \$? > ~/test-exit-status" > primesieve-test
 chmod +x primesieve-test
 

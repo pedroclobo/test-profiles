@@ -28,6 +28,9 @@ then
 else
 	make install
 fi
+
+TASKSET="taskset -c 1"
+
 cd ~/
 cp -f mafft-7.471-without-extensions/scripts/mafft mafft_/
 rm -rf mafft-7.471-without-extensions/
@@ -36,14 +39,14 @@ cp mafft-ex1-lsu-rna.txt mafft_
 
 if [ -x /usr/pkg/bin/bash ]
 then
-	# bsd fix
-	sed -i -e "s|/bin/bash|/usr/pkg/bin/bash|g" mafft_/mafft
+    # bsd fix
+    sed -i -e "s|/bin/bash|/usr/pkg/bin/bash|g" mafft_/mafft
 fi
 
 cat>mafft<<EOT
 #!/bin/sh
 cd mafft_/
-./mafft --thread \$NUM_CPU_CORES --auto mafft-ex1-lsu-rna.txt > \$LOG_FILE
+$TASKSET ./mafft --thread \$NUM_CPU_CORES --auto mafft-ex1-lsu-rna.txt > \$LOG_FILE
 echo \$? > ~/test-exit-status
 EOT
 chmod +x mafft
