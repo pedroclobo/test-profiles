@@ -6,7 +6,9 @@ cc $CFLAGS -o scimark2 *.c -lm
 echo $? > ~/install-exit-status
 cd ..
 
+TASKSET="taskset -c 1"
+
 echo "#!/bin/sh
 cd scimark2_files/
-./scimark2 -large > \$LOG_FILE 2>&1" > scimark2
+$TASKSET ./scimark2 -large > \$LOG_FILE 2>&1" > scimark2
 chmod +x scimark2

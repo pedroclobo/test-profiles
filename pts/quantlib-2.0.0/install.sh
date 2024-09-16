@@ -19,9 +19,10 @@ else
 	make -j $NUM_CPU_CORES
 	echo $? > ~/install-exit-status
 fi
+TASKSET="taskset -c 1"
 cd ~
 echo "#!/bin/bash
 cd QuantLib-68d2675fc80424a86e96697b68bf4dcbcc7dde4c/build
-./test-suite/quantlib-benchmark --nProc=\$NUM_CPU_CORES --verbose=1 \$@ > \$LOG_FILE 2>&1
+$TASKSET ./test-suite/quantlib-benchmark --nProc=\$NUM_CPU_CORES --verbose=1 \$@ > \$LOG_FILE 2>&1
 echo \$? > ~/test-exit-status" > quantlib
 chmod +x quantlib
