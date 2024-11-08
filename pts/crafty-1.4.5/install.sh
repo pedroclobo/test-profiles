@@ -2,32 +2,31 @@
 
 unzip -o crafty-25.2.zip
 
-
-if [ "X$CFLAGS_OVERRIDE" = "X" ]
-then
-          CFLAGS="$CFLAGS -O3 -march=native"
-else
-          CFLAGS="$CFLAGS_OVERRIDE"
-fi
-
-export CC="cc"
-export CXX="c++"
-export CFLAGS="-Wall -pipe -fomit-frame-pointer $CFLAGS -j $NUM_CPU_CORES"
-export CXFLAGS="-Wall -pipe -O3 -fomit-frame-pointer $CXXFLAGS -j $NUM_CPU_CORES"
 export LDFLAGS="$LDFLAGS -pthread -lstdc++"
 # sed -i ".orig" -e 's/-j /-j4 /g' Makefile
+
+cat <<EOF >> Makefile
+my-clang:
+	\$(MAKE) -j target=UNIX \\
+		CC=clang \\
+		opt='-DSYZYGY -DTEST -DCPUS=4' \\
+		CFLAGS='-Wall -Wno-array-bounds -pipe $CFLAGS -mpopcnt' \\
+		LDFLAGS='\$(LDFLAGS) -fprofile-use -lstdc++' \\
+		crafty-make
+EOF
+
+sed -i "s/\$(MAKE) -j unix-clang/\$(MAKE) my-clang/" Makefile
+
 sed -i 's/-j / /g' Makefile
-if which gcc >/dev/null; then
-    make unix-gcc
-else
-    make unix-clang
-fi
+make -j $NUM_CPU_CORES
 
 echo $? > ~/install-exit-status
+
+TASKSET="taskset -c 1"
 
 cd ~
 
 echo "#!/bin/sh
-./crafty \$@ > \$LOG_FILE 2>&1
+$TASKSET ./crafty \$@ > \$LOG_FILE 2>&1
 echo \$? > ~/test-exit-status" > crafty-benchmark
 chmod +x crafty-benchmark
