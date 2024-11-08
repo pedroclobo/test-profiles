@@ -5,6 +5,9 @@ mkdir $HOME/mafft_
 tar -xvf mafft-7.471-without-extensions-src.tgz
 cd mafft-7.471-without-extensions/core/
 
+sed -i "s/CC = gcc/CC = $CC/g" Makefile
+sed -i "s/CFLAGS = -O3/CFLAGS = $CFLAGS/g" Makefile
+
 if [ $OS_TYPE = "BSD" ]
 then
 	gmake clean
