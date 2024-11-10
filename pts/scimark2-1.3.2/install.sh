@@ -2,7 +2,7 @@
 
 unzip -o scimark2_1c.zip -d scimark2_files
 cd scimark2_files/
-cc $CFLAGS -o scimark2 *.c -lm
+$CC $CFLAGS -o scimark2 *.c -lm
 echo $? > ~/install-exit-status
 cd ..
 
