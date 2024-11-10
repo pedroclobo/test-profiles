@@ -4,6 +4,7 @@ rm -rf $HOME/mafft_
 mkdir $HOME/mafft_
 tar -xvf mafft-7.471-without-extensions-src.tgz
 cd mafft-7.471-without-extensions/core/
+find . -name Makefile | xargs -I{} sed -i 's/CC = gcc//g' {}
 
 sed -i "s/CC = gcc/CC = $CC/g" Makefile
 sed -i "s/CFLAGS = -O3/CFLAGS = $CFLAGS/g" Makefile
