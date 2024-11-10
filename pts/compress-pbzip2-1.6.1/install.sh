@@ -7,6 +7,7 @@ cp -f libbz2.a ../pbzip2-1.1.13
 cp -f bzlib.h ../pbzip2-1.1.13
 cd ..
 cd pbzip2-1.1.13/
+grep -rl PRIuMAX . | xargs sed -i 's/PRIuMAX/ PRIuMAX /g'
 make pbzip2-static
 echo $? > ~/install-exit-status
 TASKSET="taskset -c 1"
