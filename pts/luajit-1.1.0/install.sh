@@ -2,6 +2,7 @@
 
 tar -xf LuaJIT-20190110.tar.xz
 cd LuaJIT-Git
+sed -i 's/^CC=/#CC=/g' src/Makefile
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 
