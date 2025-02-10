@@ -1,8 +1,8 @@
 #!/bin/sh
-unzip -o john-c7cacb14f5ed20aca56a52f1ac0cd4d5035084b6.zip
+unzip -o c7cacb14f5ed20aca56a52f1ac0cd4d5035084b6.zip
 cd john-c7cacb14f5ed20aca56a52f1ac0cd4d5035084b6/src/
-CFLAGS="-O3 -march=native $CFLAGS" ./configure --disable-native-tests --disable-opencl
-CFLAGS="-O3 -march=native $CFLAGS" make -j $NUM_CPU_CORES
+./configure --disable-native-tests --disable-opencl
+make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 
 TASKSET="taskset -c 1"
