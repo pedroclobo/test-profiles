@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>Google Draco</Title>
+    <AppVersion>1.5.6</AppVersion>
+    <Description>Draco is a library developed by Google for compressing/decompressing 3D geometric meshes and point clouds. This test profile uses some Artec3D PLY models as the sample 3D model input formats for Draco compression/decompression.</Description>
+    <ResultScale>ms</ResultScale>
+    <Proportion>LIB</Proportion>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+  <TestSettings>
+    <Option>
+      <DisplayName>Model</DisplayName>
+      <Identifier>model</Identifier>
+      <ArgumentPrefix>-i </ArgumentPrefix>
+      <Menu>
+        <Entry>
+          <Name>Church Facade</Name>
+          <Value>church.ply</Value>
+        </Entry>
+      </Menu>
+    </Option>
+  </TestSettings>
+</PhoronixTestSuite>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>Parallel BZIP2 Compression</Title>
+    <AppVersion>1.1.13</AppVersion>
+    <Description>This test measures the time needed to compress a file (FreeBSD-13.0-RELEASE-amd64-memstick.img) using Parallel BZIP2 compression.</Description>
+    <ResultScale>Seconds</ResultScale>
+    <Proportion>LIB</Proportion>
+    <SubTitle>FreeBSD-13.0-RELEASE-amd64-memstick.img Compression</SubTitle>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+</PhoronixTestSuite>

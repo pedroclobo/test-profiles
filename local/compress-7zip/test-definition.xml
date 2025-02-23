@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>7-Zip Compression</Title>
+    <AppVersion>24.05</AppVersion>
+    <Description>This is a test of 7-Zip compression/decompression with its integrated benchmark feature.</Description>
+    <ResultScale>MIPS</ResultScale>
+    <Proportion>HIB</Proportion>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+</PhoronixTestSuite>

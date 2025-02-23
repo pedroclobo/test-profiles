@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <ResultsParser>
+    <OutputTemplate>       TOTAL.......................................................   #_RESULT_#</OutputTemplate>
+    <StripFromResult>s</StripFromResult>
+  </ResultsParser>
+</PhoronixTestSuite>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>SQLite Speedtest</Title>
+    <AppVersion>3.30</AppVersion>
+    <Description>This is a benchmark of SQLite's speedtest1 benchmark program with an increased problem size of 1,000.</Description>
+    <ResultScale>Seconds</ResultScale>
+    <Proportion>LIB</Proportion>
+    <SubTitle>Timed Time - Size 1,000</SubTitle>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+  <TestSettings>
+    <Default>
+      <Arguments>--multithread --size 1000</Arguments>
+    </Default>
+  </TestSettings>
+</PhoronixTestSuite>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>FFTW</Title>
+    <AppVersion>3.3.10</AppVersion>
+    <Description>FFTW is a C subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions.</Description>
+    <ResultScale>Mflops</ResultScale>
+    <Proportion>HIB</Proportion>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+  <TestSettings>
+    <Option>
+      <DisplayName>Build</DisplayName>
+      <Identifier>run-build</Identifier>
+      <ArgumentPrefix></ArgumentPrefix>
+      <ArgumentPostfix></ArgumentPostfix>
+      <DefaultEntry>0</DefaultEntry>
+      <Menu>
+        <Entry>
+          <Name>Stock</Name>
+          <Value>fftw-stock/tests/bench</Value>
+          <Message></Message>
+        </Entry>
+        <Entry>
+          <Name>Float + SSE</Name>
+          <Value>fftw-mr/tests/bench</Value>
+          <Message></Message>
+        </Entry>
+      </Menu>
+    </Option>
+    <Option>
+      <DisplayName>Size</DisplayName>
+      <Identifier>run-test</Identifier>
+      <ArgumentPrefix> --time-repeat 100 -opatient </ArgumentPrefix>
+      <ArgumentPostfix></ArgumentPostfix>
+      <DefaultEntry>0</DefaultEntry>
+      <Menu>
+        <Entry>
+          <Name>2D FFT Size 1024</Name>
+          <Value>ibc1024x1024</Value>
+          <Message></Message>
+        </Entry>
+      </Menu>
+    </Option>
+  </TestSettings>
+</PhoronixTestSuite>

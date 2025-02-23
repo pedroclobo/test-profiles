@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <ResultsParser>
+    <OutputTemplate>Seconds: #_RESULT_#
+Primes: 37607912018</OutputTemplate>
+  </ResultsParser>
+</PhoronixTestSuite>
