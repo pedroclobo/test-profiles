@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>Aircrack-ng</Title>
+    <AppVersion>1.7</AppVersion>
+    <Description>Aircrack-ng is a tool for assessing WiFi/WLAN network security.</Description>
+    <ResultScale>k/s</ResultScale>
+    <Proportion>HIB</Proportion>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+  <TestSettings>
+    <Default>
+      <Arguments>-S -Z 30</Arguments>
+    </Default>
+  </TestSettings>
+</PhoronixTestSuite>

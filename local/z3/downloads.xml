@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <Downloads>
+    <Package>
+      <URL>https://github.com/Z3Prover/z3/releases/download/z3-4.14.0/z3_solver-4.14.0.0.tar.gz</URL>
+      <MD5>197e902524f51cab920d259678e468ab</MD5>
+      <SHA256>83736086dc73f6309a7bb9e45e6a0b6b73de8510b606247b366038f5f40899b4</SHA256>
+      <FileName>z3_solver-4.14.0.0.tar.gz</FileName>
+      <FileSize>5026610</FileSize>
+    </Package>
+    <Package>
+      <URL>http://www.phoronix-test-suite.com/benchmark-files/1.smt2</URL>
+      <MD5>24d4b83d66709c8a9a9a6f13aecbce6d</MD5>
+      <SHA256>33e688c7195c3d486f264774ec1758613330d099a55e6a452e9b3968c8f28a60</SHA256>
+      <FileName>1.smt2</FileName>
+      <FileSize>581726</FileSize>
+    </Package>
+    <Package>
+      <URL>http://www.phoronix-test-suite.com/benchmark-files/2.smt2</URL>
+      <MD5>690720236953e12fdfbbab698f519976</MD5>
+      <SHA256>e4c8701b4e454ca12a9a00d969a2f663bfbbe587327b055ec0a1c2065ee3f9ea</SHA256>
+      <FileName>2.smt2</FileName>
+      <FileSize>80692</FileSize>
+    </Package>
+  </Downloads>
+</PhoronixTestSuite>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <Downloads>
+    <Package>
+      <URL>https://www.7-zip.org/a/7z2405-src.tar.xz</URL>
+      <MD5>adacd680fb0fe2e21d89d7fbe6777ea9</MD5>
+      <SHA256>63f341cf80b8d287c6e945519b3da0fa75553c85572a471b7fa6e68f9a90b790</SHA256>
+      <FileName>7z2405-src.tar.xz</FileName>
+      <FileSize>1486772</FileSize>
+      <PlatformSpecific>Linux, BSD, Solaris, MacOSX</PlatformSpecific>
+    </Package>
+  </Downloads>
+</PhoronixTestSuite>
