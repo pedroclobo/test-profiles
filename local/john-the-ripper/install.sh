@@ -1,5 +1,5 @@
 #!/bin/sh
-unzip -o john-c7cacb14f5ed20aca56a52f1ac0cd4d5035084b6.zip
+unzip -o c7cacb14f5ed20aca56a52f1ac0cd4d5035084b6.zip
 cd john-c7cacb14f5ed20aca56a52f1ac0cd4d5035084b6/src/
 ./configure --disable-native-tests --disable-opencl
 make -j $NUM_CPU_CORES
