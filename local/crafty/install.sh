@@ -8,8 +8,8 @@ export LDFLAGS="$LDFLAGS -pthread -lstdc++"
 cat <<EOF >> Makefile
 my-clang:
 	\$(MAKE) -j target=UNIX \\
-		CC=clang \\
-		opt='-DSYZYGY -DTEST -DCPUS=4' \\
+		CC=$CC \\
+		opt='-DSYZYGY -DTEST -DCPUS=$NUM_CPU_CORES' \\
 		CFLAGS='-Wall -Wno-array-bounds -pipe $CFLAGS -mpopcnt' \\
 		LDFLAGS='\$(LDFLAGS) -fprofile-use -lstdc++' \\
 		crafty-make
