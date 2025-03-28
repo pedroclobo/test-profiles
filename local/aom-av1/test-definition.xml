@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>AOM AV1</Title>
+    <AppVersion>3.9</AppVersion>
+    <Description>This is a test of the AOMedia AV1 encoder (libaom) developed by AOMedia and Google as the AV1 Codec Library.</Description>
+    <ResultScale>Frames Per Second</ResultScale>
+    <Proportion>HIB</Proportion>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+  <TestSettings>
+    <Default>
+      <Arguments>--tile-columns=4 --tile-rows=2 --row-mt=1 --fp-mt=1</Arguments>
+    </Default>
+    <Option>
+      <DisplayName>Encoder Mode</DisplayName>
+      <Identifier>enc-mode</Identifier>
+      <Menu>
+        <Entry>
+          <Name>Speed 6 Two-Pass</Name>
+          <Value>--cpu-used=6</Value>
+        </Entry>
+      </Menu>
+    </Option>
+    <Option>
+      <DisplayName>Input</DisplayName>
+      <Identifier>input</Identifier>
+      <Menu>
+        <Entry>
+          <Name>Bosphorus 1080p</Name>
+          <Value>Bosphorus_1920x1080_120fps_420_8bit_YUV.y4m</Value>
+        </Entry>
+      </Menu>
+    </Option>
+  </TestSettings>
+</PhoronixTestSuite>
