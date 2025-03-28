@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>JPEG-XL libjxl</Title>
+    <AppVersion>0.10.1</AppVersion>
+    <Description>The JPEG XL Image Coding System is designed to provide next-generation JPEG image capabilities with JPEG XL offering better image quality and compression over legacy JPEG. This test profile is currently focused on the multi-threaded JPEG XL image encode performance using the reference libjxl library.</Description>
+    <ResultScale>MP/s</ResultScale>
+    <Proportion>HIB</Proportion>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+  <TestSettings>
+    <Option>
+      <DisplayName>Input</DisplayName>
+      <Identifier>input-type</Identifier>
+      <Menu>
+        <Entry>
+          <Name>JPEG</Name>
+          <Value>--lossless_jpeg=0 sample-photo-6000x4000.JPG out.jxl</Value>
+        </Entry>
+      </Menu>
+    </Option>
+    <Option>
+      <DisplayName>Quality</DisplayName>
+      <Identifier>quality</Identifier>
+      <Menu>
+        <Entry>
+          <Name>90</Name>
+          <Value>-q 90 --num_reps 50</Value>
+          <Message>Default</Message>
+        </Entry>
+      </Menu>
+    </Option>
+  </TestSettings>
+</PhoronixTestSuite>

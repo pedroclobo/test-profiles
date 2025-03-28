@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <Downloads>
+    <Package>
+      <URL>https://github.com/libjxl/libjxl/archive/refs/tags/v0.10.1.tar.gz</URL>
+      <MD5>04cc0ff82965a89f9cb52854e6fc871d</MD5>
+      <SHA256>91b9a83a230d608b5d35d2ab5068bd0ec7028797575e3013211be5928028c8cd</SHA256>
+      <FileName>libjxl-0.10.1.tar.gz</FileName>
+      <FileSize>1911155</FileSize>
+    </Package>
+    <Package>
+      <URL>http://phoronix-test-suite.com/benchmark-files/sample-photo-6000x4000-1.zip</URL>
+      <MD5>3da40124023e94f63d96c22c07e7e9c2</MD5>
+      <SHA256>cadcd434abcdc82a220e7022c749b6fa5f46bb7a32ec14423ca8aab067b0e989</SHA256>
+      <FileName>sample-photo-6000x4000-1.zip</FileName>
+      <FileSize>7824306</FileSize>
+    </Package>
+  </Downloads>
+</PhoronixTestSuite>
