@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>Stockfish</Title>
+    <AppVersion>17</AppVersion>
+    <Description>This is a test of Stockfish, an advanced open-source C++11 chess benchmark that can scale up to 1024 CPU threads.</Description>
+    <ResultScale>Nodes Per Second</ResultScale>
+    <Proportion>HIB</Proportion>
+    <SubTitle>Chess Benchmark</SubTitle>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+</PhoronixTestSuite>

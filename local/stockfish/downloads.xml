@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <Downloads>
+    <Package>
+      <URL>https://github.com/official-stockfish/Stockfish/archive/refs/tags/sf_17.tar.gz</URL>
+      <MD5>6ba5dbbff959448682b0b73a79655179</MD5>
+      <SHA256>8f9b52285c3348c065b7cb58410626df16d7416a2e60a3b04f3ec7c038e67ad1</SHA256>
+      <FileName>Stockfish-sf_17.tar.gz</FileName>
+      <FileSize>204647</FileSize>
+    </Package>
+  </Downloads>
+</PhoronixTestSuite>
