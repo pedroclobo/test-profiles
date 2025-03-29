@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>Timed MAFFT Alignment</Title>
+    <AppVersion>7.471</AppVersion>
+    <Description>This test performs an alignment of 100 pyruvate decarboxylase sequences.</Description>
+    <ResultScale>Seconds</ResultScale>
+    <Proportion>LIB</Proportion>
+    <SubTitle>Multiple Sequence Alignment - LSU RNA</SubTitle>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+</PhoronixTestSuite>

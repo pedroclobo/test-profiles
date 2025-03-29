@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <Downloads>
+    <Package>
+      <URL>https://mafft.cbrc.jp/alignment/software/mafft-7.471-without-extensions-src.tgz</URL>
+      <MD5>42e01606c2e55a3534bf7b04bc44aa72</MD5>
+      <SHA256>60f8ec7bab80e00dbb24be65b8000312ffc98ff10eb72fc2219869d1dd382964</SHA256>
+      <FileName>mafft-7.471-without-extensions-src.tgz</FileName>
+      <FileSize>614447</FileSize>
+    </Package>
+    <Package>
+      <URL>https://mafft.cbrc.jp/alignment/software/ex1.txt</URL>
+      <MD5>e24394b0dcc1cc6f89cc3d85ae6656e1</MD5>
+      <SHA256>aecfc44e2321573f1e0cdc1c6922a85e2a0a986654dc1f59d07dec54c929a045</SHA256>
+      <FileName>mafft-ex1-lsu-rna.txt</FileName>
+      <FileSize>198841</FileSize>
+    </Package>
+  </Downloads>
+</PhoronixTestSuite>
