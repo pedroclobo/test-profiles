@@ -21,10 +21,6 @@
           <Value>--format=md5crypt</Value>
         </Entry>
         <Entry>
-          <Name>HMAC-SHA512</Name>
-          <Value>--format=HMAC-SHA512</Value>
-        </Entry>
-        <Entry>
           <Name>WPA PSK</Name>
           <Value>--format=wpapsk</Value>
         </Entry>
