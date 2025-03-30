@@ -6,7 +6,7 @@
     <Description>Draco is a library developed by Google for compressing/decompressing 3D geometric meshes and point clouds. This test profile uses some Artec3D PLY models as the sample 3D model input formats for Draco compression/decompression.</Description>
     <ResultScale>ms</ResultScale>
     <Proportion>LIB</Proportion>
-    <TimesToRun>3</TimesToRun>
+    <TimesToRun>5</TimesToRun>
   </TestInformation>
   <TestSettings>
     <Option>
