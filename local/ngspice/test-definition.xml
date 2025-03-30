@@ -20,10 +20,6 @@
           <Name>C2670</Name>
           <Value>~/iscas85Circuits/85/c2670/c2670_ann.net</Value>
         </Entry>
-        <Entry>
-          <Name>C7552</Name>
-          <Value>~/iscas85Circuits/85/c7552p/c7552_ann.net</Value>
-        </Entry>
       </Menu>
     </Option>
   </TestSettings>
