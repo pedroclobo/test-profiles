@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<PhoronixTestSuite>
+  <TestInformation>
+    <Title>x264</Title>
+    <AppVersion>2022-02-22</AppVersion>
+    <Description>This is a multi-threaded test of the x264 video encoder run on the CPU with a choice of 1080p or 4K video input.</Description>
+    <ResultScale>Frames Per Second</ResultScale>
+    <Proportion>HIB</Proportion>
+    <TimesToRun>3</TimesToRun>
+  </TestInformation>
+  <TestSettings>
+    <Default>
+      <Arguments>--slow-firstpass </Arguments>
+    </Default>
+    <Option>
+      <DisplayName>Video Input</DisplayName>
+      <Identifier>video</Identifier>
+      <Menu>
+        <Entry>
+          <Name>Bosphorus 1080p</Name>
+          <Value>Bosphorus_1920x1080_120fps_420_8bit_YUV.y4m</Value>
+        </Entry>
+      </Menu>
+    </Option>
+  </TestSettings>
+</PhoronixTestSuite>
