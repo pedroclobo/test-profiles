@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!--Phoronix Test Suite v8.6.0m3-->
 <PhoronixTestSuite>
   <ResultsParser>
     <OutputTemplate>SciMark  #_RESULT_#  [large problem sizes]</OutputTemplate>

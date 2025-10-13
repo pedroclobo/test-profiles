@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!--Phoronix Test Suite v10.4.0m1-->
 <PhoronixTestSuite>
   <TestInformation>
     <Title>libjpeg-turbo tjbench</Title>
@@ -8,6 +9,18 @@
     <Proportion>HIB</Proportion>
     <TimesToRun>3</TimesToRun>
   </TestInformation>
+  <TestProfile>
+    <Version>1.2.0</Version>
+    <SupportedPlatforms>Linux, Solaris, BSD, MacOSX, Windows</SupportedPlatforms>
+    <SoftwareType>Benchmark</SoftwareType>
+    <TestType>System</TestType>
+    <License>Free</License>
+    <Status>Verified</Status>
+    <ExternalDependencies>build-utilities, yasm, cmake</ExternalDependencies>
+    <EnvironmentSize>48</EnvironmentSize>
+    <ProjectURL>https://libjpeg-turbo.org/</ProjectURL>
+    <Maintainer>Michael Larabel</Maintainer>
+  </TestProfile>
   <TestSettings>
     <Option>
       <DisplayName>Test</DisplayName>

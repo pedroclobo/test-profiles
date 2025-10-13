@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.4-->
 <PhoronixTestSuite>
   <TestInformation>
     <Title>Google Draco</Title>
@@ -6,8 +7,21 @@
     <Description>Draco is a library developed by Google for compressing/decompressing 3D geometric meshes and point clouds. This test profile uses some Artec3D PLY models as the sample 3D model input formats for Draco compression/decompression.</Description>
     <ResultScale>ms</ResultScale>
     <Proportion>LIB</Proportion>
-    <TimesToRun>5</TimesToRun>
+    <TimesToRun>3</TimesToRun>
   </TestInformation>
+  <TestProfile>
+    <Version>1.6.1</Version>
+    <SupportedPlatforms>Linux</SupportedPlatforms>
+    <SoftwareType>Benchmark</SoftwareType>
+    <TestType>System</TestType>
+    <License>Free</License>
+    <Status>Verified</Status>
+    <ExternalDependencies>build-utilities, cmake</ExternalDependencies>
+    <EnvironmentSize>310</EnvironmentSize>
+    <ProjectURL>https://google.github.io/draco/</ProjectURL>
+    <RepositoryURL>https://github.com/google/draco</RepositoryURL>
+    <Maintainer>Michael Larabel</Maintainer>
+  </TestProfile>
   <TestSettings>
     <Option>
       <DisplayName>Model</DisplayName>
@@ -17,6 +31,10 @@
         <Entry>
           <Name>Church Facade</Name>
           <Value>church.ply</Value>
+        </Entry>
+        <Entry>
+          <Name>Lion</Name>
+          <Value>lion.ply</Value>
         </Entry>
       </Menu>
     </Option>

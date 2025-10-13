@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!--Phoronix Test Suite v10.2.1-->
 <PhoronixTestSuite>
   <TestInformation>
     <Title>Ngspice</Title>
@@ -8,6 +9,19 @@
     <Proportion>LIB</Proportion>
     <TimesToRun>3</TimesToRun>
   </TestInformation>
+  <TestProfile>
+    <Version>1.0.0</Version>
+    <SupportedPlatforms>Linux, MacOSX, BSD</SupportedPlatforms>
+    <SoftwareType>Utility</SoftwareType>
+    <TestType>Processor</TestType>
+    <License>Free</License>
+    <Status>Verified</Status>
+    <ExternalDependencies>build-utilities, bison, flex, xorg-development, freetype, fftw3-development</ExternalDependencies>
+    <EnvironmentSize>251</EnvironmentSize>
+    <ProjectURL>http://ngspice.sourceforge.net/</ProjectURL>
+    <Maintainer>Michael Larabel</Maintainer>
+    <SystemDependencies>X11/Xaw/Box.h</SystemDependencies>
+  </TestProfile>
   <TestSettings>
     <Default>
       <Arguments>-b -a</Arguments>
@@ -19,6 +33,10 @@
         <Entry>
           <Name>C2670</Name>
           <Value>~/iscas85Circuits/85/c2670/c2670_ann.net</Value>
+        </Entry>
+        <Entry>
+          <Name>C7552</Name>
+          <Value>~/iscas85Circuits/85/c7552p/c7552_ann.net</Value>
         </Entry>
       </Menu>
     </Option>

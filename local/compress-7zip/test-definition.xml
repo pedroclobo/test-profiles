@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.5-->
 <PhoronixTestSuite>
   <TestInformation>
     <Title>7-Zip Compression</Title>
@@ -8,4 +9,17 @@
     <Proportion>HIB</Proportion>
     <TimesToRun>3</TimesToRun>
   </TestInformation>
+  <TestProfile>
+    <Version>1.11.0</Version>
+    <SupportedPlatforms>Linux, BSD, Solaris, MacOSX, Windows</SupportedPlatforms>
+    <SoftwareType>Utility</SoftwareType>
+    <TestType>Processor</TestType>
+    <License>Free</License>
+    <Status>Verified</Status>
+    <ExternalDependencies>build-utilities, p7zip</ExternalDependencies>
+    <EnvironmentSize>16</EnvironmentSize>
+    <ProjectURL>https://www.7-zip.org/</ProjectURL>
+    <InternalTags>SMP</InternalTags>
+    <Maintainer>Michael Larabel</Maintainer>
+  </TestProfile>
 </PhoronixTestSuite>
