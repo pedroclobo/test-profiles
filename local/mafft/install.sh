@@ -16,7 +16,7 @@ make install
 
 cd ~/
 cp -f mafft-7.471-without-extensions/scripts/mafft mafft_/
-rm -rf mafft-7.471-without-extensions/
+#rm -rf mafft-7.471-without-extensions/
 
 cp mafft-ex1-lsu-rna.txt mafft_
 
