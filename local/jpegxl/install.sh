@@ -3,6 +3,7 @@ tar -xf libjxl-0.10.1.tar.gz
 unzip -o sample-photo-6000x4000-1.zip
 cd libjxl-0.10.1
 ./deps.sh
+sed -i '/#elif defined(USING_AVX_F16C)/,/^#else/{/^#else/!d}' third_party/skcms/src/Transform_inl.h
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF
