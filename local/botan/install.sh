@@ -10,6 +10,6 @@ echo $? > ~/install-exit-status
 cd ~
 echo "#!/bin/sh
 cd Botan-2.17.3
-LD_LIBRARY_PATH=.:\$LD_LIBRARY_PATH $PIN_CMD ./botan speed \$@ > \$LOG_FILE 2>&1
+LD_LIBRARY_PATH=.:\$LD_LIBRARY_PATH ./botan speed \$@ > \$LOG_FILE 2>&1
 echo \$? > ~/test-exit-status" > botan
 chmod +x botan
