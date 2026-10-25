@@ -2,7 +2,8 @@
 
 tar -xf LuaJIT-20190110.tar.xz
 cd LuaJIT-Git
-sed -i 's/^CC=/#CC=/g' src/Makefile # Remove gcc as default compiler
+# Remove gcc as default compiler. BSD sed needs a suffix after -i.
+sed -i.orig 's/^CC=/#CC=/g' src/Makefile && rm -f src/Makefile.orig
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 
