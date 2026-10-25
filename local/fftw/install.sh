@@ -7,16 +7,21 @@ rm -rf fftw-stock
 mv fftw-3.3.10 fftw-stock
 cp -a fftw-stock fftw-mr
 
-AVX_TUNING=""
-if grep avx512 /proc/cpuinfo > /dev/null; then
-  AVX_TUNING="$AVX_TUNING --enable-avx512"
+# SIMD codelets for this CPU: SSE/AVX on x86, NEON on arm64.
+case "$(uname -m)" in
+  x86_64|amd64) SIMD="--enable-sse" ;;
+  arm64|aarch64) SIMD="--enable-neon" ;;
+  *) SIMD="" ;;
+esac
+if [ -r /proc/cpuinfo ] && grep -q avx512 /proc/cpuinfo; then
+  SIMD="$SIMD --enable-avx512"
 fi
-if grep avx2 /proc/cpuinfo > /dev/null; then
-  AVX_TUNING="$AVX_TUNING --enable-avx2"
+if [ -r /proc/cpuinfo ] && grep -q avx2 /proc/cpuinfo; then
+  SIMD="$SIMD --enable-avx2"
 fi
 
 cd fftw-mr
-./configure --enable-float --enable-sse --enable-threads $AVX_TUNING
+./configure --enable-float --enable-threads $SIMD
 make -j $NUM_CPU_JOBS
 echo $? > ~/install-exit-status
 
