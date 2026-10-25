@@ -2,9 +2,14 @@
 tar -zxvf gutenberg-science.tar.gz
 tar -xf espeak-ng-1.51.tar.gz
 cd espeak-ng-1.51
+# automake requires ChangeLog.md, but the tarball names it CHANGELOG.md.
+# Rename instead of creating it: on a case-insensitive file system (macOS)
+# both names are the same file, and automake wants the exact spelling.
+ls | grep -qx ChangeLog.md || mv CHANGELOG.md ChangeLog.md
 ./autogen.sh
 ./configure --prefix=$HOME/espeak_
-sed -i "s/CC = gcc/CC = $CC/g" Makefile
+# -i.orig: BSD sed needs a backup suffix.
+sed -i.orig "s|CC = gcc|CC = $CC|g" Makefile
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 make install
