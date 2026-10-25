@@ -7,7 +7,7 @@
       <SHA256>05a704e3c8f7792a17315080a21214a4448fd2452c1b0dd5226a3a55f90b58c3</SHA256>
       <FileName>aircrack-ng-1.7.tar.gz</FileName>
       <FileSize>7740634</FileSize>
-      <PlatformSpecific>Linux, BSD</PlatformSpecific>
+      <PlatformSpecific>Linux, BSD, MacOSX</PlatformSpecific>
     </Package>
   </Downloads>
 </PhoronixTestSuite>
