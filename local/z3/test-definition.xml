@@ -11,7 +11,7 @@
   </TestInformation>
   <TestProfile>
     <Version>1.0.1</Version>
-    <SupportedPlatforms>Linux, Windows</SupportedPlatforms>
+    <SupportedPlatforms>Linux, MacOSX, Windows</SupportedPlatforms>
     <SoftwareType>Scientific</SoftwareType>
     <TestType>Processor</TestType>
     <License>Free</License>
