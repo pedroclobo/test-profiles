@@ -7,6 +7,6 @@ cd ~
 cat > compress-zstd <<EOT
 #!/bin/sh
 $PIN_CMD ./zstd-1.5.4/zstd -T\$NUM_CPU_CORES \$@ silesia.tar > \$LOG_FILE 2>&1
-sed -i -e "s/\r/\n/g" \$LOG_FILE
+tr "\r" "\n" < \$LOG_FILE > \$LOG_FILE.tmp && mv \$LOG_FILE.tmp \$LOG_FILE
 EOT
 chmod +x compress-zstd
