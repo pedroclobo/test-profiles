@@ -5,7 +5,8 @@ tar -xzvf libjpeg-turbo-2.1.0.tar.gz
 cd libjpeg-turbo-2.1.0
 mkdir build
 cd build
-cmake ..
+# CMake 4 refuses projects that require a CMake older than 3.5.
+cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 ..
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
 
