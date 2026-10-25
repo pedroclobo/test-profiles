@@ -1,6 +1,11 @@
 #!/bin/sh
 unzip -o c7cacb14f5ed20aca56a52f1ac0cd4d5035084b6.zip
 cd john-c7cacb14f5ed20aca56a52f1ac0cd4d5035084b6/src/
+# Homebrew's OpenSSL isn't on the default search paths.
+if [ "$(uname -s)" = Darwin ] && command -v brew > /dev/null; then
+  SSL="$(brew --prefix openssl@3)"
+  export CPPFLAGS="$CPPFLAGS -I$SSL/include" LDFLAGS="$LDFLAGS -L$SSL/lib"
+fi
 ./configure --disable-native-tests --disable-opencl --disable-openmp
 make -j $NUM_CPU_CORES
 echo $? > ~/install-exit-status
